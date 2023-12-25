@@ -1,7 +1,8 @@
 - name: install and run nginx
   hosts: web
+  become: yes #root access
   tasks:
-  - name : install ngnix package
+  - name: install ngnix package
     ansible.builtin.package:
       name: run ngnix
       stage: present
