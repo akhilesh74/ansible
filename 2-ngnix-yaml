@@ -1,0 +1,11 @@
+- name: install and run nginx
+  hosts: web
+  tasks:
+  - name : install ngnix package
+    ansible.builtin.package:
+      name: run ngnix
+      stage: present
+  - name: run ngnix
+    ansible.builtin.service:
+      name: ngnix
+      stage: started
