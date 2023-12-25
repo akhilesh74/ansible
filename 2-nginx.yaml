@@ -2,11 +2,11 @@
   hosts: web
   become: yes #root access
   tasks:
-  - name: install ngnix package
+  - name: install nginx package
     ansible.builtin.package:
-      name: ngnix
+      name: nginx
       stage: present
-  - name: run ngnix
+  - name: run nginx
     ansible.builtin.service:
-      name: ngnix
+      name: nginx
       stage: started
