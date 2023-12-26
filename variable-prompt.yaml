@@ -1,0 +1,14 @@
+- name: variable from play level
+  hosts: localhost
+  vars_prompt:
+    - name: USERNAME
+      prompt: please enter username
+      private: false #user can see what they are entering
+    - name: PASSWORD
+      prompt: please enter Password
+      private: true #user can't see what they are entering
+      
+  tasks:
+  - name: rint and check the values
+    ansible.builtin.debug:
+      msg: " hi, i am learning {{course}}, trainer is {{trainer}}, duration is {{duration}}"
