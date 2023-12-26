@@ -1,5 +1,6 @@
 - name: conditions
   hosts: localhost
+  become: yse
   tasks:
   - name: check roboshop exist or not
     ansible.builtin.command: id roboshop
